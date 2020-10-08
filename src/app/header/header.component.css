@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color:#330000; 
+    -webkit-box-shadow: -2px -13px 20px 11px rgba(189,176,189,1);
+    -moz-box-shadow: -2px -13px 20px 11px rgba(189,176,189,1);
+    box-shadow: -2px -13px 20px 11px rgba(189,176,189,1);
+}
+.titulo{
+    width: 54%;
+}
+
+h1 {
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: start;
+    color: #ffcc00;
+    font-size: 25px;
+    font-stretch: expanded;
+}
+
+.logo {
+    width: 46%;
+
+}
+
+.logo img{
+    width: 70%;
+    max-width:130px;
+    margin-left: 1em;
+
+}

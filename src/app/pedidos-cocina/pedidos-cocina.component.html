@@ -1,0 +1,68 @@
+<div class="titulo-cocina">
+  <h2>Pedidos - Cocina</h2>
+</div>
+
+<div class="contenedor-panel">
+  <div class="panel panel-default">
+    <div class="panel-heading">Pedidos Entrada</div>
+    <div class="panel-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="status-td">Pedidos</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td></td>
+            <td class="status-td">
+              <span class="title">Id mesa</span>
+              <span class="title">Id pedido</span>
+              <span class="title">Id produto</span>
+            </td>
+            <td><span></span></td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox"></td>
+            <td class="status-td">
+              <span class="mesa-id">1</span>
+              <span class="pedido-id">4</span>
+              <span class="produto-id">6</span>
+            </td>
+            <td><span class="entregado">Entregado</span></td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox"></td>
+            <td class="status-td">
+              <span class="mesa-id">1</span>
+              <span class="pedido-id">4</span>
+              <span class="produto-id">6</span>
+            </td>
+            <td><span class="processo">Em Processo</span></td>
+          </tr>
+
+         
+          <!--<tr *ngFor="let pedido of pedidos">
+            <td>{{ mesa.id }}</td>
+            <td>{{ pedido.id }}</td>
+            <td>{{ product.id }}</td>
+            <td> 
+              <a class="btn btn-sm btn-primary" routerLink="/Pedido-Garçon/{{producto.id}}/edit">Editar</a>
+    
+            </td>
+          </tr>-->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="btn-status">
+    <button class="btn-processo">Processo</button>
+    <button class="btn-entregado">Entregado</button>
+  </div>
+
+</div>
+

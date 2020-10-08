@@ -1,0 +1,33 @@
+
+.pedido-garcon {
+    width: 100%;
+    background-color:#330000;
+    padding: 1px;
+    text-align: center;  
+}
+
+
+h3.pedido-garcon a{
+    font-family: "Helvetica Neue", sans-serif;
+    color: #ffcc00;
+    font-size: 14px;
+    font-stretch: expanded;
+}
+
+.pedidos-cocina {
+    width: 100%;
+    background-color:#330000;
+    padding: 1px;
+    text-align: center;  
+}
+
+h3.pedidos-cocina a{
+    font-family: "Helvetica Neue", sans-serif;
+    color: #ffcc00;
+    font-size: 14px;
+    font-stretch: expanded;
+}
+
+
+
+

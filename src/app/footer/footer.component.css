@@ -1,0 +1,53 @@
+.footer{
+    width: 90%;
+    max-width: 620px;
+    margin: auto;
+}
+
+.subtitulo{
+    width: 100%;
+    background-color:#330000;
+    text-align: center;
+    margin: 1em auto;
+    padding: 6px 0;
+
+}
+
+h2 {
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: center;
+    color: #ffcc00;
+    font-size: 20px;
+    font-stretch: expanded;
+    margin: 0;
+}
+
+.contenedor-botones{
+    border: solid 4px #330000;
+    padding: 0.5em 1em 0em 1em; 
+}
+.btn-cardapio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 0 0.5em 0;
+
+}
+
+.btn-cardapio button{
+    background-color: #ffcc00;
+    border: #330000 1px;
+    text-align: center;
+    padding: 0.4em;
+    font-weight: 600;
+    
+}
+
+.btn-cardapio.extra , .btn-cardapio.sobremesa{
+    width: 70%;
+    margin: 0 auto 0.5em;
+}
+
+.btn-cardapio.extra button{
+    letter-spacing: 0.10em;
+}
