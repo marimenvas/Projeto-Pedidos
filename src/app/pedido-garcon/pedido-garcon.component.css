@@ -1,5 +1,5 @@
 .titulo-garcon{
-    width: 93%;
+    width: 85%;
     background-color:#330000;
     text-align: center;
     margin: 1em auto;
@@ -15,7 +15,7 @@ h2 {
     margin: 0;
 }
 .contenedor-pedido {
-    width: 93%;
+    width: 80%;
     border: solid 4px #330000;
     padding: 0.5em 1em 0em 1em; 
     text-align: center;
@@ -44,6 +44,7 @@ h2 {
 }
 
 .contenedor-formulario .input-element input{
+    width: 80%;
     border: none;
     margin: 0 auto 0 0;
     padding-bottom: 0.5em;

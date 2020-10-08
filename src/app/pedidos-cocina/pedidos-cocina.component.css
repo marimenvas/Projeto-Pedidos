@@ -1,5 +1,5 @@
 .titulo-cocina{
-    width: 93%;
+    width: 85%;
     background-color:#330000;
     text-align: center;
     margin: 1em auto;
@@ -16,7 +16,7 @@ h2 {
 }
 
 .contenedor-panel {
-    width: 90%;
+    width: 80%;
     max-width: 1140px;
     border: solid 4px #330000;
     padding: 1.5em 2em 1.5em 2em; 
