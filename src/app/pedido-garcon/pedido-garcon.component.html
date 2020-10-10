@@ -27,17 +27,17 @@
             <th>Producto</th>
             <th>Acciones</th>
           </thead>
-            <!--<tbody>
+            <tbody>
             <tr *ngFor="let pedido of pedidos; let i = index">
               <td>{{ pedido.mesa }}</td>
               <td>{{ pedido.pedido }}</td>
               <td>{{ product.produto }}</td>
               <td> 
-                <a class="btn btn-sm btn-primary" routerLink="/Pedido-Garçon/{{pedido.id}}/edit">Editar</a>
-                <a class="btn btn-sm btn-danger" (click)="remove(pedido)">Eliminar</a>
+                <a (click)="editPedido(i)" class="btn btn-success">Editar</a>
+                <a (click)="deletePedido(i)" class="btn btn-danger">Eliminar</a>
               </td>
             </tr>
-          </tbody>-->
+          </tbody>
         </table>
     </div>
 </div>
