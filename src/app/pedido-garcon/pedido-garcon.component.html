@@ -4,16 +4,16 @@
 <div class="contenedor-pedido">
 <form class="contenedor-formulario" >
     <div class="input-element">
-        <label for="mesa">Número de mesa</label>
-        <input type="number" id="mesa" name="mesa" [(ngModel)]="model.mesa" placeholder="nova mesa">
+        <label for="mesaid">Número de mesa</label>
+        <input type="number" id="mesaid" name="mesaid" [(ngModel)]="model.mesaid" placeholder="nova mesa">
     </div>
-    <!--<div class="input-element">
-        <label for="pedido">Número de pedido</label>
-        <input type="number" >
-      </div>-->
     <div class="input-element">
-        <label for="produto">Número de produto</label>
-        <input type="number" id="produto" name="produto" [(ngModel)]="model.produto" placeholder="novo produto">
+        <label for="id">Número de pedido</label>
+        <input type="number" id="id" name="id" [(ngModel)]="model.id" placeholder="novo pedido" >
+      </div>
+    <div class="input-element">
+        <label for="productId">Número de produto</label>
+        <input type="number" id="productId" name="productId" [(ngModel)]="model.productId" placeholder="novo produto">
       </div>
     <button type="submit" class="btn btn-success" (click)="addPedido()">Cargar</button>
 </form>
@@ -29,9 +29,9 @@
           </thead>
             <tbody>
             <tr *ngFor="let pedido of pedidos; let i = index">
-              <td>{{ pedido.mesa }}</td>
-              <td>{{ pedido.pedido }}</td>
-              <td>{{ product.produto }}</td>
+              <td>{{ pedido.mesaid }}</td>
+              <td>{{ pedido.id }}</td>
+              <td>{{ pedido.productId }}</td>
               <td> 
                 <a (click)="editPedido(i)" class="btn btn-success">Editar</a>
                 <a (click)="deletePedido(i)" class="btn btn-danger">Eliminar</a>

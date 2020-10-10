@@ -10,7 +10,7 @@ import { FormsModule } from "@angular/forms";
 })
 export class PedidoGarconComponent implements OnInit {
 
-  constructor(pedido: PedidoService) {}
+  constructor() {}
 
   pedidos = [
     {
