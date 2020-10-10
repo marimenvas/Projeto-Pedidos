@@ -5,17 +5,17 @@
 <form class="contenedor-formulario" >
     <div class="input-element">
         <label for="mesa">Número de mesa</label>
-        <input type="number" name="mesa">
+        <input type="number" id="mesa" name="mesa" [(ngModel)]="model.mesa" placeholder="nova mesa">
     </div>
     <!--<div class="input-element">
         <label for="pedido">Número de pedido</label>
         <input type="number" >
       </div>-->
     <div class="input-element">
-        <label for="producto">Número de produto</label>
-        <input type="number">
+        <label for="produto">Número de produto</label>
+        <input type="number" id="produto" name="produto" [(ngModel)]="model.produto" placeholder="novo produto">
       </div>
-    <button class="cargar">Cargar</button>
+    <button type="submit" class="btn btn-success" (click)="addPedido()">Cargar</button>
 </form>
     <div class="panel panel-default">
       <div class="panel-heading">Pedidos Entrada</div>
@@ -28,12 +28,12 @@
             <th>Acciones</th>
           </thead>
             <!--<tbody>
-            <tr *ngFor="let pedido of pedidos">
-              <td>{{ mesa.id }}</td>
-              <td>{{ pedido.id }}</td>
-              <td>{{ product.id }}</td>
+            <tr *ngFor="let pedido of pedidos; let i = index">
+              <td>{{ pedido.mesa }}</td>
+              <td>{{ pedido.pedido }}</td>
+              <td>{{ product.produto }}</td>
               <td> 
-                <a class="btn btn-sm btn-primary" routerLink="/Pedido-Garçon/{{producto.id}}/edit">Editar</a>
+                <a class="btn btn-sm btn-primary" routerLink="/Pedido-Garçon/{{pedido.id}}/edit">Editar</a>
                 <a class="btn btn-sm btn-danger" (click)="remove(pedido)">Eliminar</a>
               </td>
             </tr>
