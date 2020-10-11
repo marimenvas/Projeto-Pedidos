@@ -8,6 +8,6 @@ export const appRoutes: Routes = [
     { path: 'pedido-garcon', component: PedidoGarconComponent},
     { path: 'pedidos-cocina', component: PedidosCocinaComponent},
     { path: 'pedidos', component:PedidosListComponent},
-    //{ path: "redirectTo:', pedidos-list, pathMatch:'full'" }
+    { path:'', redirectTo:'./pedidos-garcon', pathMatch:'full'}
  
 ];

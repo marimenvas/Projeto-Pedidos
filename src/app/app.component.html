@@ -1,15 +1,22 @@
 <header>
   <app-header></app-header>
 </header>
-<div class="container">    
-      <h3 class="pedido-garcon"><a routerLink="/pedido-garcon">Pedido - Garçon</a></h3>
-     
-      <h3 class="pedidos-cocina"><a routerLink="/pedidos-cocina">Pedidos - Cocina</a></h3>  
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-pills">
+      <li class="pedido-garcon">
+        <a routerLink="/pedido-garcon">Pedido - Garçon</a>
+      </li>
+      <li class="pedidos-cocina">
+        <a routerLink="/pedidos-cocina">Pedidos - Cocina</a>
+      </li>
+    </ul>
+  </div>
 </div>
 
-  <div>
-    <router-outlet></router-outlet>
-  </div>
+<div>
+  <router-outlet></router-outlet>
+</div>
 
 <!--<section>
   <div class="lik-garcon"> 
@@ -22,7 +29,3 @@
 <footer>
   <app-footer></app-footer>
 </footer>
-
-
-
-

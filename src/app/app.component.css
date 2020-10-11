@@ -1,31 +1,37 @@
-
+/*
 .pedido-garcon {
     width: 100%;
-    background-color:#330000;
     padding: 1px;
     text-align: center;  
 }
 
+.container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
 
-h3.pedido-garcon a{
+
+li.pedido-garcon a{
     font-family: "Helvetica Neue", sans-serif;
-    color: #ffcc00;
-    font-size: 14px;
+    color:  #330000;
+    font-size: 18px;
     font-stretch: expanded;
+    font-weight: 550;
 }
 
 .pedidos-cocina {
     width: 100%;
-    background-color:#330000;
     padding: 1px;
     text-align: center;  
 }
 
-h3.pedidos-cocina a{
+li.pedidos-cocina a{
     font-family: "Helvetica Neue", sans-serif;
-    color: #ffcc00;
-    font-size: 14px;
+    color:  #330000;
+    font-size: 18px;
     font-stretch: expanded;
+    font-weight: 550;
 }
 
 .container{
@@ -37,6 +43,31 @@ h3.pedidos-cocina a{
 h3{
     border-radius: 0px 10px 10px 0;
 }
+*/
 
+.container{
+    width: 100%;
+}
+
+li{
+    background-color: #443030;
+    font-weight: 500;
+    border-radius: 0 0 20px 20px;
+    }
+
+li:hover, li:focus, li a:hover, li a:focus{
+   background-color: #ffffff;
+   border-radius: 0 0 20px 20px;
+}
+
+li a{
+    font-weight: 500;
+    color: #ffffff;
+}
+
+li a:hover, li a:focus{
+    font-weight: 500;
+    color: #330000;
+}
 
 
