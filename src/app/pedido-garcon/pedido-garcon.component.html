@@ -15,7 +15,7 @@
         <label for="productId">Número de produto</label>
         <input type="number" id="productId" name="productId" [(ngModel)]="model.productId" placeholder="novo produto">
       </div>
-    <button type="submit" class="btn btn-success" (click)="addPedido()">Cargar</button>
+    <button type="submit" class="btn btn-success" (click)="addPedido()">Caregar</button>
 </form>
     <div class="panel panel-default">
       <div class="panel-heading">Pedidos Entrada</div>
@@ -24,7 +24,7 @@
           <thead>
             <th>Id Mesa</th>
             <th>Id Pedido</th>
-            <th>Producto</th>
+            <th>Produto</th>
             <th>Acciones</th>
           </thead>
             <tbody>
@@ -34,7 +34,7 @@
               <td>{{ pedido.productId }}</td>
               <td> 
                 <a (click)="editPedido(i)" class="btn btn-success">Editar</a>
-                <a (click)="deletePedido(i)" class="btn btn-danger">Eliminar</a>
+                <a (click)="deletePedido(i)" class="btn btn-danger">Deletar</a>
               </td>
             </tr>
           </tbody>

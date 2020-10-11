@@ -43,7 +43,11 @@ export class PedidoGarconComponent implements OnInit {
   }
   addGetPedido():void{
   }
-  deletePedido():void{
+  deletePedido(i):void{
+    var answer = confirm ('Está seguro que quer deletar?');
+    if(answer){
+      this.pedidos.splice(i, 1);
+    }
   }
   editPedido():void{
   }
