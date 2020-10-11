@@ -1,5 +1,5 @@
 .titulo-garcon{
-    width: 85%;
+    width: 80%;
     background-color:#330000;
     text-align: center;
     margin: 1em auto;
@@ -22,12 +22,24 @@ h2 {
     margin: auto;
 }
 
+.box-alert{
+  width: 100%;
+  position: relative;
+}
+
+.alert{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 22%;
+    max-width: 300px;
+}
 .contenedor-formulario {
     width: 100%;
     padding: 0.5em 0 0em 0; 
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     margin-bottom: 2em;
 }
 
@@ -63,4 +75,9 @@ label{
 }
 .table th{
     color: #330000;  
+    text-align: center;
+}
+
+.btn-success{
+    margin-right: 1em;
 }

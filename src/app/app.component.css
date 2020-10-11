@@ -28,6 +28,15 @@ h3.pedidos-cocina a{
     font-stretch: expanded;
 }
 
+.container{
+    display: flex;
+    padding: 0;
+    width: 100%;
+}
+
+h3{
+    border-radius: 0px 10px 10px 0;
+}
 
 
 
