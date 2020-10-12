@@ -15,34 +15,36 @@
 <form class="contenedor-formulario" >
     <div class="input-element">
         <label for="mesaid">Número de mesa</label>
-        <input type="number" id="mesaid" name="mesaid" [(ngModel)]="model.mesaid" placeholder="nova mesa">
+        <input type="number" id="mesaid" name="mesaid" [(ngModel)]="model.mesaid" placeholder="Nova">
     </div>
     <div class="input-element">
         <label for="id">Número de pedido</label>
-        <input type="number" id="id" name="id" [(ngModel)]="model.id" placeholder="novo pedido" >
+        <input type="number" id="id" name="id" [(ngModel)]="model.id" placeholder="Novo" >
       </div>
     <div class="input-element">
         <label for="productId">Número de produto</label>
-        <input type="number" id="productId" name="productId" [(ngModel)]="model.productId" placeholder="novo produto">
+        <input type="number" id="productId" name="productId" [(ngModel)]="model.productId" placeholder="Novo">
       </div>
     <button type="submit" class="btn btn-success" (click)="addPedido()">Caregar</button>
 </form>
 
 <form class="contenedor-formulario-editar" [hidden]="hideUpdate" >
   <h3>Editar Pedido</h3>
-  <div class="input-element">
+  <div class="container-inputs">
+  <div class="input-element edit">
       <label for="mesaid">Número de mesa</label>
-      <input type="number" id="mesaid" name="mesaid" [(ngModel)]="model2.mesaid" placeholder="nova mesa">
+      <input type="number" id="mesaid" name="mesaid" [(ngModel)]="model2.mesaid" placeholder="Edit">
   </div>
-  <div class="input-element">
+  <div class="input-element edit">
       <label for="id">Número de pedido</label>
-      <input type="number" id="id" name="id" [(ngModel)]="model2.id" placeholder="novo pedido" >
+      <input type="number" id="id" name="id" [(ngModel)]="model2.id" placeholder="Edit" >
     </div>
-  <div class="input-element">
+  <div class="input-element edit">
       <label for="productId">Número de produto</label>
-      <input type="number" id="productId" name="productId" [(ngModel)]="model2.productId" placeholder="novo produto">
+      <input type="number" id="productId" name="productId" [(ngModel)]="model2.productId" placeholder="Edit">
     </div>
-      <button type="submit" class="btn btn-success"(click)="updatePedido()">Editar</button>
+      <button type="submit" class="btn btn-success"(click)="updatePedido()">Salvar</button>
+    </div>
 </form>
 
 

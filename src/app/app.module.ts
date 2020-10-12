@@ -13,6 +13,7 @@ import { PedidosListComponent } from './pedidos-list/pedidos-list.component';
 import { PedidoService } from './pedido.service';
 import { RouterModule } from '@angular/router';
 import { from } from 'rxjs';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -23,7 +24,8 @@ import { from } from 'rxjs';
     PedidosCocinaComponent,
     HeaderComponent,
     FooterComponent,
-    PedidosListComponent
+    PedidosListComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
