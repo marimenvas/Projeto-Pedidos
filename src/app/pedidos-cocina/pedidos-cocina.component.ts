@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 import { PedidoService } from '../pedido.service';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-pedidos-cocina',
@@ -9,9 +10,29 @@ import { PedidoService } from '../pedido.service';
 })
 export class PedidosCocinaComponent implements OnInit {
 
-  public pedidos;
+  constructor() { }
 
-  constructor(private _service: PedidoService) { }
+  pedidos: any = [{
+    "id": 1,
+      "productId": 2,
+      "mesaid": 2,
+      "status_pedido": 1,
+    },
+
+    {
+      "id": 2,
+      "productId": 3,
+      "mesaid": 2,
+      "status_pedido": 2,
+    },
+
+    {
+      "id": 3,
+      "productId": 2,
+      "mesaid": 2,
+      "status_pedido": 1,
+  }
+];
 
   ngOnInit(): void {
   }
