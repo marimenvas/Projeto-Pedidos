@@ -14,8 +14,8 @@ export class PedidoGarconComponent implements OnInit {
 
   msg:string = '';
 
-  pedidos = [
-    {
+  pedidos: any = [{
+    
       "id": 1,
       "productId": 2,
       "mesaid": 2,
@@ -64,6 +64,7 @@ export class PedidoGarconComponent implements OnInit {
     this.model2.productId = this.pedidos[i].productId;
     this.myValue = i;
   }
+
   updatePedido():void{
     let i = this.myValue;
     for(let j = 0; j < this.pedidos.length;j++){

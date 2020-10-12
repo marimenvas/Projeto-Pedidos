@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { PedidoGarconComponent } from "./pedido-garcon/pedido-garcon.component";
 import { HttpClient } from '@angular/common/http';
 
 
@@ -6,39 +7,32 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PedidoService {
-  
-  constructor(private http:HttpClient) { }
 
-  public list() {
-    return [
-      {
-    "id": 1,
-    "productId": 2,
-    "mesaid": 2,
-    "status_pedido": 1,
-    "is_active": true,
-    "createdAt": "2020-09-28T17:47:18.511Z",
-    "updatedAt": "2020-09-28T18:04:42.485Z"
-    },
-    {
-    "id": 3,
-    "productId": 2,
-    "mesaid": 2,
-    "status_pedido": 1,
-    "is_active": true,
-    "createdAt": "2020-09-28T17:50:12.524Z",
-    "updatedAt": "2020-09-28T17:50:12.524Z"
-    },
-    {
-    "id": 6,
-    "productId": 1,
-    "mesaid": 2,
-    "status_pedido": 1,
-    "is_active": true,
-    "createdAt": "2020-09-29T12:00:19.425Z",
-    "updatedAt": "2020-09-29T12:00:19.425Z"
-    }
-    ]
+  readonly apiURL : string;
+  
+  constructor(private http:HttpClient) {
+      this.apiURL= 'http://localhost:3000';
   }
+
+  listAllPedidos() {
+    this.http.get(`${ this.apiURL }/pedidos`)
+             .subscribe(resultado => console.log(resultado));
+  }
+
+  deleteProduto() {
+    this.http.delete(`${ this.apiURL }/pedido/1`)
+              .subscribe(
+                resultado => {
+                  console.log('Produto excluído com sucesso.');
+                },
+                erro => {
+                  if(erro.status == 404) {
+                    console.log('Produto não localizado.');
+                  }
+                }
+              );
+  }
+  
+  
 }
  

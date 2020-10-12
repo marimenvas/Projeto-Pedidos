@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { appRoutes } from './app.routing';
 import { FormsModule } from "@angular/forms";
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PedidoGarconComponent } from './pedido-garcon/pedido-garcon.component';
