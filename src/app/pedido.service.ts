@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PedidoGarconComponent } from "./pedido-garcon/pedido-garcon.component";
+import { PedidosCocinaComponent } from "./pedidos-cocina/pedidos-cocina.component";
+
 import { HttpClient } from '@angular/common/http';
 
 
@@ -8,31 +10,33 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PedidoService {
 
-  readonly apiURL : string;
-  
-  constructor(private http:HttpClient) {
-      this.apiURL= 'http://localhost:3000';
-  }
+  pedidos: any = [{
+    
+      "id": 1,
+      "productId": 2,
+      "mesaid": 2,
+      "status_pedido": 1,
+    },
 
-  listAllPedidos() {
-    this.http.get(`${ this.apiURL }/pedidos`)
-             .subscribe(resultado => console.log(resultado));
-  }
+    {
+      "id": 2,
+      "productId": 3,
+      "mesaid": 2,
+      "status_pedido": 2,
+    },
 
-  deleteProduto() {
-    this.http.delete(`${ this.apiURL }/pedido/1`)
-              .subscribe(
-                resultado => {
-                  console.log('Produto excluído com sucesso.');
-                },
-                erro => {
-                  if(erro.status == 404) {
-                    console.log('Produto não localizado.');
-                  }
-                }
-              );
-  }
+    {
+      "id": 3,
+      "productId": 2,
+      "mesaid": 2,
+      "status_pedido": 0,
+    }];
   
+  constructor() {}
+
+    getTodos() {
+       return this.pedidos;
+    }
   
 }
  

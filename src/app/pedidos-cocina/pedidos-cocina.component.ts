@@ -10,29 +10,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class PedidosCocinaComponent implements OnInit {
 
-  constructor() { }
-
-  pedidos: any = [{
-     "id": 1,
-      "productId": 2,
-      "mesaid": 2,
-      "status_pedido": 1,
-    },
-
-    {
-      "id": 2,
-      "productId": 3,
-      "mesaid": 2,
-      "status_pedido": 2,
-    },
-
-    {
-      "id": 3,
-      "productId": 2,
-      "mesaid": 2,
-      "status_pedido": 0,
+  constructor(pedidosServ: PedidoService) { 
+    this.pedidos = pedidosServ.getTodos();
   }
-];
+
+  pedidos: any = [];
 
   ngOnInit(): void {
   }

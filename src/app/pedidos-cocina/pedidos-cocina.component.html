@@ -32,8 +32,8 @@
               <span class="id">{{ pedido.id }}</span>
               <span class="productoId">{{ pedido.productId }}</span>
             </td>
-            <td><span class="status_pedido" *ngIf= "pedido.status_pedido == '1'">Em processo</span>
-              <span class="status_pedido" *ngIf= "pedido.status_pedido == '2'">- Entregado -</span>
+            <td><span class="status_pedido1" *ngIf= "pedido.status_pedido == '1'">Em processo</span>
+              <span class="status_pedido2" *ngIf= "pedido.status_pedido == '2'">- Entregado -</span>
               <span class="status_pedido" *ngIf= "pedido.status_pedido == ''">- Em espera-</span></td>
           </tr>
 

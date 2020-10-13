@@ -10,33 +10,13 @@ import { FormsModule } from "@angular/forms";
 })
 export class PedidoGarconComponent implements OnInit {
 
-  constructor() {}
+  constructor(pedidosServ: PedidoService) {
+    this.pedidos = pedidosServ.getTodos();
+  }
 
   msg:string = '';
 
-  pedidos: any = [{
-    
-      "id": 1,
-      "productId": 2,
-      "mesaid": 2,
-      "status_pedido": 1,
-    },
-
-    {
-      "id": 2,
-      "productId": 3,
-      "mesaid": 2,
-      "status_pedido": 2,
-    },
-
-    {
-      "id": 3,
-      "productId": 2,
-      "mesaid": 2,
-      "status_pedido": 1,
-    }
-  
-  ];
+  pedidos: any = [];
 
   model:any={};
   model2:any={};
@@ -79,7 +59,7 @@ export class PedidoGarconComponent implements OnInit {
   ngOnInit(): void {
   }
 
- // closeAlert(): void{
-   // this.msg = '';}
+  //closeAlert(): void{
+   //this.msg = '';}
 
 }

@@ -98,6 +98,14 @@ table, td, th, tr, span{
     color: aliceblue;
 }
 
+.status_pedido1{
+    color:#29cc00;
+}
+
+.status_pedido2{
+    color:#cc0000;
+}
+
 .btn-status .btn-entregado:hover{
     background-color: #a50404 ;
 }
