@@ -23,17 +23,18 @@
               <span class="title">Id pedido</span>
               <span class="title">Id produto</span>
             </td>
-            <td><span></span></td>
           </tr>
 
-          <tr>
+          <tr *ngFor="let pedido of pedidos; let i = index">
             <td><input type="checkbox"></td>
-            <td class="status-td" *ngFor="let pedido of pedidos; let i = index">
+            <td class="status-td">
               <span class="mesaid">{{ pedido.mesaid }}</span>
               <span class="id">{{ pedido.id }}</span>
               <span class="productoId">{{ pedido.productId }}</span>
             </td>
-            <td><span class="processo"></span></td>
+            <td><span class="status_pedido" *ngIf= "pedido.status_pedido == '1'">Em processo</span>
+              <span class="status_pedido" *ngIf= "pedido.status_pedido == '2'">- Entregado -</span>
+              <span class="status_pedido" *ngIf= "pedido.status_pedido == ''">- Em espera-</span></td>
           </tr>
 
 

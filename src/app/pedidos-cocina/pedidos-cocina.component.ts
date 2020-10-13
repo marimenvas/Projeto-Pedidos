@@ -13,7 +13,7 @@ export class PedidosCocinaComponent implements OnInit {
   constructor() { }
 
   pedidos: any = [{
-    "id": 1,
+     "id": 1,
       "productId": 2,
       "mesaid": 2,
       "status_pedido": 1,
@@ -30,7 +30,7 @@ export class PedidosCocinaComponent implements OnInit {
       "id": 3,
       "productId": 2,
       "mesaid": 2,
-      "status_pedido": 1,
+      "status_pedido": 0,
   }
 ];
 
