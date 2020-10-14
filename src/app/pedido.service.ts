@@ -5,38 +5,42 @@ import { PedidosCocinaComponent } from "./pedidos-cocina/pedidos-cocina.componen
 import { HttpClient } from '@angular/common/http';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PedidoService {
 
-  pedidos: any = [{
-    
-      "id": 1,
-      "productId": 2,
-      "mesaid": 2,
-      "status_pedido": 1,
-    },
-
-    {
-      "id": 2,
-      "productId": 3,
-      "mesaid": 2,
-      "status_pedido": 2,
-    },
-
-    {
-      "id": 3,
-      "productId": 2,
-      "mesaid": 2,
-      "status_pedido": 0,
-    }];
+  pedidos: any = [];
+  pedido: any = [];
   
-  constructor() {}
+  constructor(private http:HttpClient) {}
+
 
     getTodos() {
        return this.pedidos;
     }
+
+    getPedidos(){
+      return this.http.get('http://localhost:3000/pedidos')
+    }
+
+    postPedido() {
+      let pedido = { Id: "" };
+    
+      this.http.post('http://localhost:3000/pedido', pedido)
+                .subscribe(
+                  resultado => {
+                    console.log(resultado)
+                  },
+                  erro => {
+                    if(erro.status == 400) {
+                      console.log(erro);
+                    }
+                  }
+                );
+    }
+    
   
 }
  
