@@ -11,26 +11,33 @@ import { enableDebugTools } from '@angular/platform-browser';
 })
 export class PedidoGarconComponent implements OnInit {
 
+  readonly apiURL : string;
+
   constructor(pedidosServ: PedidoService) {
-    //pedidosServ.getPedidos().subscribe(pedidos=> {
+
+    this.apiURL = 'http://localhost:3000';
+   // pedidosServ.getPedidos().subscribe(pedidos=> {
      // this.pedidos = pedidos
     //});
 
    // pedidosServ.postPedido().subscribe(pedido => {
-      //this.pedido = pedido
-   // });
+    //this.pedido = pedido
+    //});
+    
   }
 
   msg:string = ''
 
   pedidos: any = [];
+  pedido: any = [];
  
 
-  model:any={};
+  model:any={PedidoGarconComponent};
   model2:any={};
   hideUpdate:boolean = true;
 
   addPedido():void{
+  
     this.pedidos.push(this.model);
     this.msg = 'pedido carregado';
   }
