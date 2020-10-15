@@ -31,7 +31,8 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot(appRoutes),
     FormsModule,
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+
   ],
   providers: [PedidoService],
   bootstrap: [AppComponent]

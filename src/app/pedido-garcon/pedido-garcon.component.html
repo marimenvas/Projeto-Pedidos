@@ -5,9 +5,9 @@
 
   <div class="box-alert">
     <div class="alert alert-success alert-dismissable" *ngIf="msg">
-      <a href="#" class="close" (click)="closeAlert()">
+      <button class="close" (click)="closeAlert()">
         &times;
-      </a>
+      </button>
       {{msg}}
     </div>
   </div>
@@ -19,7 +19,7 @@
     </div>
     <div class="input-element">
         <label for="id">Número de pedido</label>
-        <input type="number" id="id" name="id" [(ngModel)]="model.id" placeholder="New" >
+        <input type="number" id="id" name="id" [(ngModel)]="model.id" placeholder="New">
     </div>
     <div class="input-element">
         <label for="productId">Número de produto</label>

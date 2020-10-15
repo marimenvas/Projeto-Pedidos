@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PedidoService } from '../pedido.service';
 import { FormsModule } from "@angular/forms";
+import { enableDebugTools } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pedido-garcon',
@@ -10,19 +11,33 @@ import { FormsModule } from "@angular/forms";
 })
 export class PedidoGarconComponent implements OnInit {
 
+  readonly apiURL : string;
+
   constructor(pedidosServ: PedidoService) {
-    this.pedidos = pedidosServ.getTodos();
+
+    this.apiURL = 'http://localhost:3000';
+   // pedidosServ.getPedidos().subscribe(pedidos=> {
+     // this.pedidos = pedidos
+    //});
+
+   // pedidosServ.postPedido().subscribe(pedido => {
+    //this.pedido = pedido
+    //});
+    
   }
 
-  msg:string = '';
+  msg:string = ''
 
   pedidos: any = [];
+  pedido: any = [];
+ 
 
-  model:any={};
+  model:any={PedidoGarconComponent};
   model2:any={};
   hideUpdate:boolean = true;
 
   addPedido():void{
+  
     this.pedidos.push(this.model);
     this.msg = 'pedido carregado';
   }
@@ -59,7 +74,6 @@ export class PedidoGarconComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //closeAlert(): void{
-   //this.msg = '';}
-
-}
+  closeAlert(): void{
+    this.msg ='';}
+  }
