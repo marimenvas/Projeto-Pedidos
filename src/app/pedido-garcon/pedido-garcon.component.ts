@@ -6,7 +6,6 @@ import { FormsModule } from "@angular/forms";
   selector: 'app-pedido-garcon',
   templateUrl: './pedido-garcon.component.html',
   styleUrls: ['./pedido-garcon.component.css'],
- 
 })
 export class PedidoGarconComponent implements OnInit {
 
