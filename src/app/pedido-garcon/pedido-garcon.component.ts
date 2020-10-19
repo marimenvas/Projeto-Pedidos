@@ -9,40 +9,44 @@ import { enableDebugTools } from '@angular/platform-browser';
   styleUrls: ['./pedido-garcon.component.css'],
  
 })
-export class PedidoGarconComponent implements OnInit {
 
-  readonly apiURL : string;
+export class PedidoGarconComponent {//implements OnInit {  
 
-  constructor(pedidosServ: PedidoService) {
+  msg:string = '';
+  
+  myValue;
 
-    this.apiURL = 'http://localhost:3000';
-   // pedidosServ.getPedidos().subscribe(pedidos=> {
-     // this.pedidos = pedidos
-    //});
-
-   // pedidosServ.postPedido().subscribe(pedido => {
-    //this.pedido = pedido
-    //});
-    
-  }
-
-  msg:string = ''
-
-  pedidos: any = [];
   pedido: any = [];
- 
+  pedidos: any = [];
 
-  model:any={PedidoGarconComponent};
+  model:any={};
   model2:any={};
   hideUpdate:boolean = true;
 
+  onSubmit(formulario){
+    this.pedidoServ.postPedidos(formulario.form.value)
+    .subscribe(resposta => {
+      console.log(resposta);
+      alert('Pedido enviado com sucesso!');
+
+    });
+    //console.log(formulario.form.value)
+
+  }
+
+  constructor(private pedidoServ: PedidoService) {
+    //this.pedidos = pedidosServ.getTodos();// leva a get todos
+
+    pedidoServ.getPedidos().subscribe(pedidos=> {
+      this.pedidos = pedidos
+    });
+  }
+
   addPedido():void{
-  
     this.pedidos.push(this.model);
     this.msg = 'pedido carregado';
   }
-  addGetPedido():void{
-  }
+
   deletePedido(i):void{
     var answer = confirm ('Está seguro que quer deletar?');
     if(answer){
@@ -51,8 +55,7 @@ export class PedidoGarconComponent implements OnInit {
     }
   }
 
-  myValue;
-  editPedido(i):void{
+  editPedido(i):void{// para fazer mudanças no angular não faz enviou para a API
     this.hideUpdate = false;
     this.model2.mesaid = this.pedidos[i].mesaid;
     this.model2.id = this.pedidos[i].id;
@@ -60,7 +63,7 @@ export class PedidoGarconComponent implements OnInit {
     this.myValue = i;
   }
 
-  updatePedido():void{
+  updatePedido():void{ // para fazer mudanças no angular não faz enviou para a API
     let i = this.myValue;
     for(let j = 0; j < this.pedidos.length;j++){
       if(i == j) {
@@ -71,7 +74,7 @@ export class PedidoGarconComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {// da erro si tiro
   }
 
   closeAlert(): void{
