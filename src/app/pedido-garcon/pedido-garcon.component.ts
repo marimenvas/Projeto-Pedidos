@@ -10,6 +10,7 @@ import { enableDebugTools } from '@angular/platform-browser';
  
 })
 
+
 export class PedidoGarconComponent {//implements OnInit {  
 
   msg:string = '';
@@ -20,6 +21,7 @@ export class PedidoGarconComponent {//implements OnInit {
   pedidos: any = [];
 
   model:any={};
+
   model2:any={};
   hideUpdate:boolean = true;
 
@@ -56,6 +58,7 @@ export class PedidoGarconComponent {//implements OnInit {
     }
   }
 
+
   editPedido(i):void{// para fazer mudanças no angular não faz enviou para a API
     this.hideUpdate = false;
     this.model2.mesaid = this.pedidos[i].mesaid;
@@ -64,7 +67,9 @@ export class PedidoGarconComponent {//implements OnInit {
     this.myValue = i;
   }
 
+
   updatePedido():void{ // para fazer mudanças no angular não faz enviou para a API
+
     let i = this.myValue;
     for(let j = 0; j < this.pedidos.length;j++){
       if(i == j) {
@@ -75,7 +80,9 @@ export class PedidoGarconComponent {//implements OnInit {
     }
   }
 
+
   ngOnInit(): void {// da erro si tiro
+
   }
 
   closeAlert(): void{
