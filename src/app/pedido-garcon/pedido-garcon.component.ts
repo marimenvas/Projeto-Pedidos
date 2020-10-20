@@ -30,6 +30,7 @@ export class PedidoGarconComponent {//implements OnInit {
       alert('Pedido enviado com sucesso!');
 
     });
+
     //console.log(formulario.form.value)
 
   }
