@@ -11,7 +11,10 @@ import { FormsModule } from '@angular/forms';
 export class PedidosCocinaComponent implements OnInit {
 
   constructor(pedidosServ: PedidoService) { 
-    this.pedidos = pedidosServ.getTodos();
+
+      pedidosServ.getPedidos().subscribe(pedidos=> {
+        this.pedidos = pedidos
+      });
   }
 
   pedidos: any = [];
